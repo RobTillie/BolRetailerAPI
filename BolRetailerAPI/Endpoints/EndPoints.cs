@@ -11,7 +11,10 @@
 
         public string Token { get; } = "token?grant_type=client_credentials";
         public string Orders { get; } = "orders";
+        public string ProductsList { get; } = "products/list";
         public string SingleOrder { get; } = "orders/";
         public string Shipments { get; } = "shipments";
+        public string SingleCatalogProduct { get; } = "content/catalog-products/";
+
     }
 }

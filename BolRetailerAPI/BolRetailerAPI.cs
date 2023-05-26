@@ -4,6 +4,7 @@ using BolRetailerApi.Models.Authorization;
 using BolRetailerApi.Models.Status;
 using BolRetailerApi.Services;
 using BolRetailerApi.Services.Authorization;
+using BolRetailerAPI.Services;
 
 namespace BolRetailerApi
 {
@@ -73,5 +74,25 @@ namespace BolRetailerApi
         private ShipmentService _shipmentService;
         public ShipmentService ShipmentService =>
             _shipmentService ??= new ShipmentService(_httpClient, EndPoints, _authorizationToken, RateLimits);
+
+        /// <summary>
+        /// Gets the product content service.
+        /// </summary>
+        /// <value>
+        /// The product content service.
+        /// </value>
+        private ProductContentService _productContentService;
+        public ProductContentService ProductContentService =>
+            _productContentService ??= new ProductContentService(_httpClient, EndPoints, _authorizationToken, RateLimits);
+
+        /// <summary>
+        /// Gets the product service.
+        /// </summary>
+        /// <value>
+        /// The product service.
+        /// </value>
+        private ProductsService _productsService;
+        public ProductsService ProductsService =>
+            _productsService ??= new ProductsService(_httpClient, EndPoints, _authorizationToken, RateLimits);
     }
 }

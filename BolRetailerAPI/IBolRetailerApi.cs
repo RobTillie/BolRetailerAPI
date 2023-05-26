@@ -1,5 +1,6 @@
 ﻿using BolRetailerApi.Services;
 using BolRetailerApi.Services.Authorization;
+using BolRetailerAPI.Services;
 
 namespace BolRetailerApi
 {
@@ -31,5 +32,9 @@ namespace BolRetailerApi
         /// The shipment service.
         /// </value>
         ShipmentService ShipmentService { get; }
+
+        ProductsService ProductsService { get; }
+
+        ProductContentService ProductContentService { get; }
     }
 }
